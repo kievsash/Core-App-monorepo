@@ -1,10 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { App2Component } from './app.component';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
-import { SecondComponent } from './second/second.component';
+import {SecondComponent} from './second/second.component';
 
 const routes: Routes = [
   { path: '', component: SecondComponent }
@@ -16,8 +15,8 @@ const routes: Routes = [
     SecondComponent
   ],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes)
+    CommonModule,
+    RouterModule.forChild(routes)
   ],
   providers: [],
   bootstrap: [App2Component]

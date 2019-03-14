@@ -1,25 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { App2Component } from './app.component';
+import { App1Component } from './app.component';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
-import { SecondComponent } from './second/second.component';
+import {FirstComponent} from './first/first.component';
 
 const routes: Routes = [
-  { path: '', component: SecondComponent }
+  { path: '', component: FirstComponent }
 ];
+
 
 @NgModule({
   declarations: [
-    App2Component,
-    SecondComponent
+    App1Component,
+    FirstComponent
   ],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes)
+    CommonModule,
+    RouterModule.forChild(routes)
   ],
   providers: [],
-  bootstrap: [App2Component]
+  bootstrap: [App1Component]
 })
-export class App2Module { }
+export class App1Module { }

@@ -7,10 +7,14 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { SecondComponent } from './second/second.component';
+import { SomeCoreComponentComponent } from './some-core-component/some-core-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SecondComponent,
+    SomeCoreComponentComponent
   ],
   imports: [
     BrowserModule,
