@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "admin-lib": [
+        "dist/admin-lib"
+      ],
+      "admin-lib/*": [
+        "dist/admin-lib/*"
+      ]
+    }
   }
 }
