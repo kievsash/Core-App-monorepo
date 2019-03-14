@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { App2Component } from './app.component';
-import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import { SecondComponent } from './second/second.component';
 
