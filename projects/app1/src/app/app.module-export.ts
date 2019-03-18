@@ -6,6 +6,9 @@ import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {FirstComponent} from './first/first.component';
 import {AdminLibModule} from '../../../admin-lib/src/lib/admin-lib.module';
+import {StoreModule} from '@ngrx/store';
+import {metaReducers, reducers} from './store';
+import {showHideReducer} from './store/showHideElement/hide-show.reducer';
 
 const routes: Routes = [
   { path: '', component: FirstComponent }
@@ -20,7 +23,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     AdminLibModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    StoreModule.forFeature('app1ShowHide', showHideReducer),
   ],
   providers: [],
   bootstrap: [App1Component]

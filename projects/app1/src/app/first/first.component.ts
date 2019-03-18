@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {ShowState} from '../store/showHideElement/hide-show.reducer';
+import {Store} from '@ngrx/store';
+import {selectShowValue} from '../store';
+import {InvertHideShow} from '../store/showHideElement/hide-show.actions';
 
 @Component({
   selector: 'app-first',
@@ -6,10 +10,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent implements OnInit {
+  showAdmin = true;
+  constructor(private store: Store<any>) {
 
-  constructor() { }
+  }
 
   ngOnInit() {
+    this.store.select(selectShowValue).subscribe((value) => {
+      this.showAdmin = value;
+    })
+  }
+
+  toggleAdminShow() {
+    this.store.dispatch(new InvertHideShow());
   }
 
 }

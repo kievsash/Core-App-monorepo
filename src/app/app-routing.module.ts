@@ -4,15 +4,15 @@ import {SomeCoreComponentComponent} from './some-core-component/some-core-compon
 
 const routes: Routes = [
   {
-    path: 'customers',
+    path: 'app1',
     loadChildren: '../../projects/app1/src/app/app.module-export#App1Module'
   },
   {
-    path: 'orders',
+    path: 'app2',
     loadChildren: '../../projects/app2/src/app/app.module-export#App2Module'
   },
   {
-    path: 'second',
+    path: 'somecoreroute',
     component: SomeCoreComponentComponent
   },
   {

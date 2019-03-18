@@ -3,10 +3,12 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
+  <button (click)="toggleApp1()">Toggle admin component in app1 from CoreApp</button>
+  <button (click)="toggleApp2()">Toggle admin component in app2 from CoreApp</button>
 <h1>Outlets below:</h1>
 
-  <a [routerLink]="['/customers']" >Customers</a>
-  <a [routerLink]="['/orders']" >Orders</a>
-  <a [routerLink]="['/second']" >Second</a>
+  <a [routerLink]="['/app1']" >App1</a>
+  <a [routerLink]="['/app2']" >App2</a>
+  <a [routerLink]="['/somecoreroute']" >Some Core App Route</a>
 
 <router-outlet></router-outlet>

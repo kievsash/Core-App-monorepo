@@ -1,4 +1,5 @@
 <p>
-  first works!
+  App1 works!
 </p>
-<lib-admin-lib></lib-admin-lib>
+<button (click)="toggleAdminShow()">Toggle admin component visibility in app1</button>
+<lib-admin-lib *ngIf="showAdmin"></lib-admin-lib>
