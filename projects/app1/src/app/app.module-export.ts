@@ -5,6 +5,7 @@ import { App1Component } from './app.component';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {FirstComponent} from './first/first.component';
+import {AdminLibModule} from '../../../admin-lib/src/lib/admin-lib.module';
 
 const routes: Routes = [
   { path: '', component: FirstComponent }
@@ -18,6 +19,7 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
+    AdminLibModule,
     RouterModule.forChild(routes)
   ],
   providers: [],

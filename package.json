@@ -6,7 +6,7 @@
     "start:Core": "ng serve --port 4444",
     "start:app1": "ng serve app1 --port 4422",
     "start:app2": "ng serve app2 --port 4423",
-    "build": "ng build",
+    "build:core": "ng build --prod --stats-json",
     "build:admin-lib": "ng build admin-lib",
     "build:app1": "ng build app1",
     "build:app2": "ng build app2",

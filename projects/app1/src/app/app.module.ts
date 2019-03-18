@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { App1Component } from './app.component';
 import {RouterModule, Routes} from '@angular/router';
 import { FirstComponent } from './first/first.component';
+import { environment } from '../../../../src/environments/environment';
 
 const routes: Routes = [
   { path: '', component: FirstComponent }
