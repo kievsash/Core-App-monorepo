@@ -7,7 +7,6 @@ import {RouterModule, Routes} from '@angular/router';
 import {FirstComponent} from './first/first.component';
 import {AdminLibModule} from '../../../admin-lib/src/lib/admin-lib.module';
 import {StoreModule} from '@ngrx/store';
-import {metaReducers, reducers} from './store';
 import {showHideReducer} from './store/showHideElement/hide-show.reducer';
 
 const routes: Routes = [

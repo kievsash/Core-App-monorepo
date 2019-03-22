@@ -5,7 +5,6 @@ import {RouterModule, Routes} from '@angular/router';
 import { FirstComponent } from './first/first.component';
 import { environment as environmentParent  } from '../../../../src/environments/environment';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import {AdminLibModule} from '../../../admin-lib/src/lib/admin-lib.module';

@@ -2,26 +2,46 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
 
-## Development server
+## Main project structure
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- You have one **CoreApp**
+    * made with `ng new CoreApp`.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- You have 2 sub-applications (app1 and app2) 
 
-## Build
+    * `ng generate application app1`
+    * `ng g application app2`)
+- You have library admin-lib 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    * `ng g lib admin-lib`
 
-## Running unit tests
+- **App1** and **App2** can be started and developed independently:
+    * `npm run start:app1` and `npm run start:app2`
+    * `npm run test:app1` and `npm run test:app2`
+    * `npm run lint:app1` and `npm run lint:app2`
+    * `npm run build:app1` and `npm run build:app2`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Each of **App1** and **App2** has its own _ngRx_ instance, so you can use _Redux-Dev-Tools_ to observe their Stores.
 
-## Running end-to-end tests
+- **admin-lib** can be build and used in any of apps (_CoreApp_, _app1_ and _app2_)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- **CoreApp** includes **App1** and **App2** as lazy-loaded routing modules. 
+    * ngRx feature modules of both app1 and app2 are attached to CoreApp Store.
+    * You can send actions from CoreApp to change App1 and App3 feature branches values.
 
-## Further help
+## Implementation details
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To implement this I each sub-application (app1 and app2) has:
+ - **app.module.ts** - for independent development
+ - **app.module-export.ts** - to be used when included in Core-App
+
+Mostly they should be identical except **app.module-export.ts** has such app.module-export.ts:
+- **RouterModule.forRoot** is changed to **RouterModule.forChild**
+- **StoreModule.forRoot** is removed (but feature moduls should stay)
+- **StoreDevtoolsModule** is removed as well
+
+```Actually these two files has be easily merged (todo for the future), modules can be attached and detached just by using some CoreApp environment.ts variable```
+
+
+

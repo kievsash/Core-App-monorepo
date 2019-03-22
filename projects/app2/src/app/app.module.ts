@@ -7,6 +7,8 @@ import { SecondComponent } from './second/second.component';
 import {StoreModule} from '@ngrx/store';
 import {AdminLibModule} from '../../../admin-lib/src/lib/admin-lib.module';
 import {showHideReducer} from './store/showHideElement/hide-show.reducer';
+import {environment} from '../../../app1/src/environments/environment';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 const routes: Routes = [
   { path: '', component: SecondComponent }
@@ -22,7 +24,8 @@ const routes: Routes = [
     AdminLibModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot({}),
-    StoreModule.forFeature('app2ShowHide', showHideReducer)
+    StoreModule.forFeature('app2ShowHide', showHideReducer),
+    !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   providers: [],
   bootstrap: [App2Component]
