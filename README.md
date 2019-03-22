@@ -42,6 +42,14 @@ Mostly they should be identical except **app.module-export.ts** has such app.mod
 - **StoreDevtoolsModule** is removed as well
 
 ```Actually these two files has be easily merged (todo for the future), modules can be attached and detached just by using some CoreApp environment.ts variable```
+## Installation notes:
+* Clone github repo 
+* `npm install OR npm i`
+* `npm run start:Core` (or any other command from package.json 'scripts' section)
 
+## Animated demo
+1. Project structure
+![](CoreApp-project-structure.gif)
 
-
+2. Starting **App1**, **App2** and **CoreApp**
+![](CoreApp-start_apps_separately.gif)
