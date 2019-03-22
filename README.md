@@ -32,7 +32,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Implementation details
 
-To implement this I each sub-application (app1 and app2) has:
+Each of sub-application (app1 and app2) has:
  - **app.module.ts** - for independent development
  - **app.module-export.ts** - to be used when included in Core-App
 
