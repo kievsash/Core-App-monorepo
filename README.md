@@ -36,7 +36,7 @@ Each of sub-application (app1 and app2) has:
  - **app.module.ts** - for independent development
  - **app.module-export.ts** - to be used when included in Core-App
 
-Mostly they should be identical except **app.module-export.ts** has such app.module-export.ts:
+Mostly they should be identical except **app.module-export.ts** has such specifics:
 - **RouterModule.forRoot** is changed to **RouterModule.forChild**
 - **StoreModule.forRoot** is removed (but feature moduls should stay)
 - **StoreDevtoolsModule** is removed as well
