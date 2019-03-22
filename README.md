@@ -24,7 +24,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - Each of **App1** and **App2** has its own _ngRx_ instance, so you can use _Redux-Dev-Tools_ to observe their Stores.
 
-- **admin-lib** can be build and used in any of apps (_CoreApp_, _app1_ and _app2_)
+- **admin-lib** is a components lib and can be build and used in any of apps (_CoreApp_, _app1_ and _app2_)
 
 - **CoreApp** includes **App1** and **App2** as lazy-loaded routing modules. 
     * ngRx feature modules of both app1 and app2 are attached to CoreApp Store.
