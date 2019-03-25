@@ -42,7 +42,8 @@ Mostly they should be identical except **app.module-export.ts** has such specifi
 - **StoreModule.forRoot** is removed (but feature modules should stay)
 - **StoreDevtoolsModule** is removed as well (CoreApp has its own StoreDevtools module)
 
-```Actually these two files has be easily merged (todo for the future), modules can be attached and detached just by using some CoreApp environment.ts variable```
+```Actually these two files has be easily merged to one (todo for the future), used modules can be attached and detached just by using some CoreApp environment.ts variable```
+
 ## Installation notes:
 * Clone github repo 
 * `npm install` OR `npm i`
