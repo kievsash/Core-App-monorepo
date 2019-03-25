@@ -38,8 +38,8 @@ Each of sub-application (app1 and app2) has:
 
 Mostly they should be identical except **app.module-export.ts** has such specifics:
 - **RouterModule.forRoot** is changed to **RouterModule.forChild**
-- **StoreModule.forRoot** is removed (but feature moduls should stay)
-- **StoreDevtoolsModule** is removed as well
+- **StoreModule.forRoot** is removed (but feature modules should stay)
+- **StoreDevtoolsModule** is removed as well (CoreApp has its own StoreDevtools module)
 
 ```Actually these two files has be easily merged (todo for the future), modules can be attached and detached just by using some CoreApp environment.ts variable```
 ## Installation notes:
