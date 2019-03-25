@@ -12,6 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
     * `ng generate application app1`
     * `ng g application app2`)
+
 - You have library admin-lib 
 
     * `ng g lib admin-lib`
