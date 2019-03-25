@@ -44,7 +44,8 @@ Mostly they should be identical except **app.module-export.ts** has such specifi
 ```Actually these two files has be easily merged (todo for the future), modules can be attached and detached just by using some CoreApp environment.ts variable```
 ## Installation notes:
 * Clone github repo 
-* `npm install OR npm i`
+* `npm install` OR `npm i`
+* `npm run build:admin-lib`
 * `npm run start:Core` (or any other command from package.json 'scripts' section)
 
 ## Animated demo
