@@ -28,7 +28,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - **CoreApp** includes **App1** and **App2** as lazy-loaded routing modules. 
     * ngRx feature modules of both app1 and app2 are attached to CoreApp Store.
-    * You can send actions from CoreApp to change App1 and App3 feature branches values.
+    * You can send actions from CoreApp to change App1 and App2 feature branches values.
 
 ## Implementation details
 
