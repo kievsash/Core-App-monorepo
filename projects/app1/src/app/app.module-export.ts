@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { App1Component } from './app.component';
@@ -29,3 +28,4 @@ const routes: Routes = [
   bootstrap: [App1Component]
 })
 export class App1Module { }
+
